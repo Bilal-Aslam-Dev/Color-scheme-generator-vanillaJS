@@ -392,7 +392,7 @@ header .nav-item.nav_active:after {
   content: "";
   display: inherit;
   border-radius: 100vmax;
-  width: 100%;
+  width: 2ch;
   height: 2px;
   background-color: #4f8bff;
 }
@@ -416,6 +416,10 @@ header .mobile-hamburger span {
   border-radius: 5px;
   height: 4px;
   width: 27px;
+}
+
+.offcanvas {
+  opacity: 0.91;
 }
 
 footer {
