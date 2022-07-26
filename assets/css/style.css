@@ -29,9 +29,40 @@ p {
   --lightv1: #f0faff;
   --lightv2: #F5F5F5;
   --lightv3: #1C84BF;
+  --dark: #5a5a5a;
   --darkv1: #D2D6DA;
   --darkv2: #233e50;
   --darkv3: #000000;
+}
+
+.accordion_ex .accordion-item {
+  border-radius: 10px !important;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.accordion_ex .accordion-button:focus,
+.accordion_ex .accordion-button:active {
+  box-shadow: none !important;
+}
+.accordion_ex .accordion-body p {
+  color: #263238;
+}
+.accordion_ex .accordion-button {
+  background-color: var(--lightv3);
+  border-radius: 10px !important;
+  transition: 0.2s all ease-in;
+}
+.accordion_ex .accordion-button::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  filter: brightness(0) invert(1);
+}
+.accordion_ex .accordion_text {
+  font-size: clamp(0.8rem, 1.999vw, 1.25rem) !important;
+  color: #fff;
+}
+.accordion_ex .accordion-button:not(.collapsed) {
+  transform: scaleX(1.02);
 }
 
 .btn_pri {
@@ -88,8 +119,16 @@ p {
   color: var(--primary);
 }
 
+.sec_headv2 {
+  font-size: clamp(20px, 2.4vw, 24px);
+}
+
 .br_20 {
   border-radius: 20px;
+}
+
+.br_30 {
+  border-radius: 30px;
 }
 
 .slick-dots li button:before {
@@ -141,6 +180,10 @@ p {
   font-size: 12px;
 }
 
+.fs-14 {
+  font-size: 12px;
+}
+
 .fs_12_resp {
   font-size: clamp(12px, 2.5vw, 1rem);
 }
@@ -171,6 +214,78 @@ p {
   font-size: 2rem;
 }
 
+.form_wrapper {
+  background: #ffffff;
+  box-shadow: 0px 12px 30px -18px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 42px 42px 42px;
+}
+
+.form_wrapper.loan_form {
+  max-width: 100%;
+  margin: 12px 0 90px;
+}
+
+.form_wrapper.loan_form .smt_btn {
+  margin-top: 2rem;
+}
+
+.form_wrapper .cus_label {
+  display: block;
+  color: #262f37;
+  margin: 8px 0;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.form_wrapper .cus_feild {
+  background: #fcfcfc;
+  border: 1px solid #d2d6da;
+  border-radius: 30px;
+  padding: 15px 12px;
+  width: 100%;
+  color: #a3a6aa;
+  font-size: 14px;
+}
+
+.form_wrapper .cus_feild::-moz-placeholder {
+  color: #a3a6aa;
+  font-size: 14px;
+}
+
+.form_wrapper .cus_feild:-ms-input-placeholder {
+  color: #a3a6aa;
+  font-size: 14px;
+}
+
+.form_wrapper .cus_feild::placeholder {
+  color: #a3a6aa;
+  font-size: 14px;
+}
+
+.form_wrapper .cus_feild:focus {
+  outline: none;
+  box-shadow: 0px 0px 2px 0px var(--primary);
+}
+
+.under-line:after {
+  content: "";
+  display: block;
+  width: 40px;
+  background-color: var(--lightv3);
+  border-radius: 5px;
+  height: 5px;
+  margin-block: 1em;
+}
+
+.border-hover {
+  border: 1px solid var(--secondary);
+}
+.border-hover:hover {
+  background-color: var(--secondary);
+  color: #fff !important;
+}
+
 .t_primary {
   color: var(--primary);
 }
@@ -180,7 +295,7 @@ p {
 }
 
 .t_sec {
-  color: var(--secondary);
+  color: var(--secondary) !important;
 }
 
 .bg_sec {
@@ -217,6 +332,14 @@ p {
 
 .bg_lightv3 {
   background-color: var(--lightv3);
+}
+
+.t_dark {
+  color: var(--dark);
+}
+
+.bg_dark {
+  background-color: var(--dark);
 }
 
 .t_darkv1 {
@@ -261,6 +384,17 @@ header .nav-btn {
 }
 header .nav-btn.mg-side {
   margin-left: clamp(1.1em, 1.7vw, 3em);
+}
+header .nav-item.nav_active a {
+  color: #4f8bff;
+}
+header .nav-item.nav_active:after {
+  content: "";
+  display: inherit;
+  border-radius: 100vmax;
+  width: 100%;
+  height: 2px;
+  background-color: #4f8bff;
 }
 header .nav-item a {
   text-decoration: none;
@@ -330,7 +464,7 @@ footer .footer-sub-head:after {
 }
 
 .banner {
-  padding: clamp(4rem, 9vw, 7rem) 0;
+  padding: clamp(0rem, 15vw, 18rem) 0;
   background-size: cover;
   width: 100%;
   background-position: top center;
@@ -361,7 +495,81 @@ footer .footer-sub-head:after {
 }
 .home .sec_two.banner {
   background-image: url("../images/home/fast-and-simple.png");
-  padding: clamp(0rem, 8vw, 18rem) 0;
+  padding: clamp(2rem, 9.3vw, 8rem) 0;
+}
+
+.our-programs .banner {
+  background-image: url("../images/banner/our-program-banner.jpg");
+}
+
+.faq .banner {
+  background-image: url("../images/banner/faq-banner.jpg");
+}
+
+.about-us .banner {
+  background-image: url("../images/banner/about-us.jpg");
+}
+
+.loan-form .banner {
+  background-image: url("../images/banner/loanform.jpg");
+}
+
+.contact-us-page .banner {
+  background-image: url("../images/banner/contactus-banner.jpg");
+}
+
+.partner-page .banner {
+  background-image: url("../images/banner/partner.jpg");
+}
+.partner-page .banner.ty_banner {
+  background-image: url("../images/banner/partner.jpg");
+}
+
+.aboutUs-bg {
+  background-color: #1C84BF;
+  height: 100%;
+  width: 45%;
+  position: absolute;
+}
+
+.about-us h3 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: clamp(18px, 1.8vw, 30px);
+}
+.about-us .itel_ag img {
+  mix-blend-mode: multiply;
+}
+.about-us .au_t {
+  margin-left: 3%;
+  font-size: clamp(12px, 2.5vw, 18px);
+}
+.about-us .at {
+  background-color: #F0FAFF !important;
+  transform: translate(-1.8%, -24px);
+}
+.about-us .xy {
+  margin-left: 19%;
+}
+
+.au_badge {
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  right: 50%;
+  position: absolute;
+  transform: translateX(50%);
+  top: -9%;
+}
+
+.au_card {
+  box-shadow: 4px 4px 13px 0px rgba(28, 132, 191, 0.11);
+}
+
+.fintec-funding-list li {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 1400px) {
@@ -374,13 +582,13 @@ footer .footer-sub-head:after {
     margin-right: 1.7em !important;
   }
 }
-@media (min-width: 993px) {
-  .mobile-menu {
-    display: none;
+@media (min-width: 768px) {
+  .contact_info.bg_lightv2, .contact-us-page .sec1_hero.bg_lightv2 {
+    background-color: #fff;
   }
   .pos_abs_sm {
     position: absolute;
-    top: 18vw;
+    top: 60%;
   }
   .sec_3 {
     margin-top: 15.5rem !important;
@@ -389,8 +597,50 @@ footer .footer-sub-head:after {
     transform: translatey(-50px) !important;
   }
 }
+@media (min-width: 992px) {
+  .mobile-menu {
+    display: none;
+  }
+  .au_badge {
+    top: -4% !important;
+    left: -4%;
+  }
+}
 @media (max-width: 992px) {
   .md_d_none {
     display: none;
+  }
+  .aboutUs-bg {
+    width: 100%;
+    height: 45%;
+  }
+  .about-us .at {
+    transform: translate(0);
+    padding-block: 1em;
+  }
+  .about-us .p-001 {
+    color: var(--light) !important;
+  }
+  .about-us .au_t {
+    margin-left: 0;
+    padding-inline: 1em;
+    text-align: center;
+    z-index: 9;
+  }
+  .about-us .au_t:first-child {
+    color: white;
+  }
+  .about-us h3 {
+    margin-block: 1em;
+  }
+  .about-us h3.color_chg {
+    color: var(--secondary);
+  }
+  .about-us .itel_ag {
+    display: flex;
+    justify-content: center;
+  }
+  .xy {
+    margin: 0 !important;
   }
 }/*# sourceMappingURL=style.css.map */
