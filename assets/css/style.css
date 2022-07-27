@@ -218,6 +218,10 @@ p {
   font-size: 2rem;
 }
 
+.no_hover:hover {
+  color: inherit;
+}
+
 .form_wrapper {
   background: #ffffff;
   box-shadow: 0px 12px 30px -18px rgba(0, 0, 0, 0.1);
