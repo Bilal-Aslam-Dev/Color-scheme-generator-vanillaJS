@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+}
+*::after, *::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #2F4858;
+  --secondary: #263238  ;
+  --light: #fff;
+  --lightv1: #f0faff;
+  --lightv2: #F5F5F5;
+  --lightv3: #1C84BF;
+  --dark: #5a5a5a;
+  --darkv1: #D2D6DA;
+  --darkv2: #233e50;
+  --darkv3: #000000;
+}
+$primary: var(--primary);
+$secondary: var(--secondary);
+$light: var(--light);
+$lightv1: var(--lightv1);
+$lightv2: var(--lightv2);
+$lightv3: var(--lightv3);
+$dark: var(--dark);
+$darkv1: var(--darkv1);
+$darkv2: var(--darkv2);
+$darkv3: var(--darkv3);
+
+@import "./baseclasses";
+@import "./colors";
+@import "./header";
+@import "./footer";
+@import "./banners";
+@import "./aboutUs";
+@import "./partner";
+@import "./mediaquery";

@@ -1,0 +1,87 @@
+.banner {
+  padding: clamp(0rem, 15vw, 18rem) 0;
+  background-size: cover;
+  width: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  .banner_caps {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .b_heading {
+      font-size: clamp(1.5rem, 4vw, 3.125rem);
+      font-weight: 700;
+    }
+    .b_sub_heading {
+      font-size: clamp(0.75rem, 4vw, 1rem);
+      font-weight: 600;
+    }
+    .banner_text {
+      font-size: clamp(12px, 3vw, 14px);
+      font-weight: 400;
+    }
+  }
+}
+.home {
+    .banner {
+      background-image: url('../images/banner/home-banner.png');
+      padding: 4rem 0;
+  }
+  .sec_two {
+    &.banner {
+      background-image: url('../images/home/fast-and-simple.png');
+      padding: clamp(2rem, 9.3vw, 8rem) 0
+    }
+  }
+}
+.our-programs {
+  .banner {
+    background-image: url('../images/banner/our-program-banner.jpg');
+  }
+}
+.faq {
+  .banner {
+    background-image: url('../images/banner/faq-banner.jpg');
+  }
+}
+.about-us {
+  .banner {
+    background-image: url('../images/banner/about-us.jpg');
+  }
+}
+.loan-form {
+  .banner {
+    background-image: url('../images/banner/loanform.jpg');
+  }
+}
+.contact-us-page {
+  .banner {
+    background-image: url('../images/banner/contactus-banner.jpg');
+  }
+}
+.partner-page {
+  .banner {
+    background-image: url('../images/banner/partner.jpg');
+  }
+  .sec_two{
+    &.banner {
+      background-image: url('../images/banner/partner.jpg');
+      padding: clamp(2rem, 9.3vw, 8rem) 0;
+      .b_heading {
+        font-size: clamp(1.2rem, 4vw, 3.125rem);
+        font-weight: 700;
+      }
+    }
+  }
+}
+.career-development {
+  .banner {
+    background-image: url('../images/banner/contactus-banner.jpg');
+  }
+  .banner_two {
+    &.banner {
+      background-image: url('../images/banner/partner.jpg');
+    }
+  }
+}

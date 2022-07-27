@@ -82,6 +82,10 @@ p {
   background-color: #fff;
   color: var(--lightv3);
 }
+.btn_pri.btn_opposite:hover, .btn_pri.btn_opposite :focus {
+  background-color: var(--lightv3) !important;
+  color: #fff !important;
+}
 
 .contactus-form-wrapper {
   background-color: #233e50 !important;
@@ -525,7 +529,19 @@ footer .footer-sub-head:after {
 .partner-page .banner {
   background-image: url("../images/banner/partner.jpg");
 }
-.partner-page .banner.ty_banner {
+.partner-page .sec_two.banner {
+  background-image: url("../images/banner/partner.jpg");
+  padding: clamp(2rem, 9.3vw, 8rem) 0;
+}
+.partner-page .sec_two.banner .b_heading {
+  font-size: clamp(1.2rem, 4vw, 3.125rem);
+  font-weight: 700;
+}
+
+.career-development .banner {
+  background-image: url("../images/banner/contactus-banner.jpg");
+}
+.career-development .banner_two.banner {
   background-image: url("../images/banner/partner.jpg");
 }
 
@@ -574,6 +590,12 @@ footer .footer-sub-head:after {
 .fintec-funding-list li {
   display: flex;
   align-items: center;
+  margin-block: 0.79em;
+}
+.fintec-funding-list li p {
+  font-size: clamp(18px, 2.8vw, 15px);
+  font-weight: 500;
+  margin-left: 0.8em;
 }
 
 @media (max-width: 1400px) {
@@ -596,6 +618,10 @@ footer .footer-sub-head:after {
   }
   .sec_3 {
     margin-top: 15.5rem !important;
+  }
+  .partner-page .sec_3 {
+    padding-top: 9rem !important;
+    margin-top: 0 !important;
   }
   .sec_two .banner_caps {
     transform: translatey(-50px) !important;

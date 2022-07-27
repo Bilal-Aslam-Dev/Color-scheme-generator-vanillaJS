@@ -1,0 +1,12 @@
+.fintec-funding-list {
+    li {
+        display: flex;
+        align-items: center;
+        margin-block: 0.79em;
+        p {
+            font-size: clamp(18px, 2.8vw, 15px);
+            font-weight: 500;
+            margin-left: 0.8em;
+        }
+    }
+}
