@@ -28,7 +28,7 @@ body {
 }
 .color-scheme-type {
     border: none;
-    width: 60%;
+    width: 65%;
     background-color: #fff;
     border: 1px solid gray;
     border-radius: 5px;
@@ -46,28 +46,23 @@ body {
     margin-top: 1em;
     padding-inline: 0.4em;
 }
+.color-codes {
+    padding-inline: 1em;
+}
 .color-shade {
     width: 20%;
     height: 400px;
-    background-color: black;
     cursor: pointer;
+    transition: ease 0.2s all;
+}
+.color-shade:hover {
+    transform: scale(1.03);
 }
 .color-shade:nth-child(1) {
-    background-color: red;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.color-shade:nth-child(2) {
-    background-color: rgb(0, 0, 0);
-}
-.color-shade:nth-child(3) {
-    background-color: rgb(53, 98, 167);
-}
-.color-shade:nth-child(4) {
-    background-color: rgb(236, 25, 226);
-}
 .color-shade:nth-child(5) {
-    background-color: rgb(158, 158, 158);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -76,11 +71,11 @@ body {
     text-align: center;
     padding-block: 1em;
     padding-inline: 0.5;
-    font-size: clamp(0.9rem, 2.4vw, 1rem);
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    margin-top: 0.25em;
 }
-@media (max-width: 567px) {
+@media (max-width: 56px) {
     .color-scheme-type {
-        width: 45%;
         font-size: 0.65em;
         padding-block: 0.9em;
         
@@ -88,7 +83,75 @@ body {
         padding-inline: 0.47em;
         font-size: 12px;
     }
-    .color-scheme-code {
-        font-size: 12px
+}
+@media (max-width: 455px) {
+    .material-icons {
+        font-size: 14px;
+    }
+}
+
+.copy {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+    transition: all 0.1s ease;
+  }
+  .copy:hover {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: 20px;
+    left: -15px;
+    background: #373737;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    opacity: 0;
+  }
+  .tooltip.appear {
+    -webkit-animation: appear 1s ease;
+            animation: appear 1s ease;
+  }
+  
+  @-webkit-keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      transform: translateY(10px);
+      opacity: 1;
+    }
+    80% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      transform: translateY(10px);
+      opacity: 1;
+    }
+    80% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
 }

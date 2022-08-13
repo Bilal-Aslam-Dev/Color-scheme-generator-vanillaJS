@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Color Scheme Picker</title>
 </head>
 <body >
     <div class="container-full">
         <div>
-            <form id="get-color-scheme" class="d-flex align-items-center justify-content-between">
-                <input type="color" class="color-input" id="color-input">
+            <form id="get-color-scheme" class="d-flex getter align-items-center justify-content-between">
+                <div>
+                    <input type="color" class="color-input getter" id="color-input">
+                    <p style="margin: 0;position: absolute;top: 48px;font-size: 12px;">Tap to change</p>
+                </div>
+                
                 <select name="" id="scheme-type" class="color-scheme-type">
                     <option value="monochrome">Monochrome</option>
                     <option value="monochrome-dark">Monochrome-dark</option>
@@ -25,24 +30,54 @@
                     <option value="triad">Triad</option>
                     <option value="quad">Quad</option>
                 </select>
-                <button class="color-scheme-btn" type="button">Get color scheme</button>
             </form>
         </div>
     </div>
     <div class="color-shades-all d-flex">
-        <div type="button" onclick="ani()" class="color-shade"></div>
+        <div type="button" class="color-shade"></div>
         <div type="button" class="color-shade"></div>
         <div type="button" class="color-shade"></div>
         <div type="button" class="color-shade"></div>
         <div type="button" class="color-shade"></div>
     </div>
-    <div class="d-flex">
-        <div class="color-scheme-code">#fVCVC3</div>
-        <div class="color-scheme-code">#C34234</div>
-        <div class="color-scheme-code">#g3f2C3</div>
-        <div class="color-scheme-code">#qV3sC3</div>
-        <div class="color-scheme-code">#pVCVC3</div>
+    <div class="d-flex justify-content-between color-codes">
+        <div class="color__secondary color-1" id="color-1">         
+            <div class="copy" id="copy-7">
+              <span class="tooltip">Copied</span>
+              <i class="material-icons">content_copy</i>
+              <div class="color-scheme-code"></div>
+            </div>
+        </div>       
+        <div class="color__secondary color-2" id="color-2">         
+            <div class="copy" id="copy-7">
+              <span class="tooltip">Copied</span>
+              <i class="material-icons">content_copy</i>
+              <div class="color-scheme-code"></div>
+            </div>
+        </div>       
+        <div class="color__secondary color-3" id="color-3">         
+            <div class="copy" id="copy-7">
+              <span class="tooltip">Copied</span>
+              <i class="material-icons">content_copy</i>
+              <div class="color-scheme-code"></div>
+            </div>
+        </div>       
+        <div class="color__secondary color-4" id="color-4">         
+            <div class="copy" id="copy-7">
+              <span class="tooltip">Copied</span>
+              <i class="material-icons">content_copy</i>
+              <div class="color-scheme-code"></div>
+            </div>
+        </div>       
+        <div class="color__secondary color-7" id="color-7">         
+            <div class="copy" id="copy-7">
+              <span class="tooltip">Copied</span>
+              <i class="material-icons">content_copy</i>
+              <div class="color-scheme-code"></div>
+            </div>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
